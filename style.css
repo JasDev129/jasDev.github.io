@@ -38,12 +38,15 @@
     padding: 0 160px;
     position: relative;
     z-index: 1;
+    transition: all .50s ease;
 }
 .logo{
     color: var(--primaryColor);
     font-size: 28px;
     font-weight: 600;
-
+    position: relative;
+    top: 0;
+    left: 0;
 }
 .menu{
     display: none;
@@ -99,7 +102,7 @@
     place-self: start;
     align-self: center;
     position: relative;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hero-left-content span{
@@ -247,6 +250,7 @@
 }
 .skill:hover{
    background-color: var(--primaryColor);
+   transform: translate(4px, 2px);
 }
 .skill p{
     color: #fff;
@@ -695,15 +699,21 @@
 
 
 @media screen and (max-width: 767.98px) {
- 
-    .nav-list{
-            display: none;
-        }
     .main-nav{
         display: flex;
         justify-content: center;
-        align-items: center;
-        padding: 0 160px;
+    }
+    .nav-list{
+        display: none;
+    }
+    .block{
+        display: block;
+        position: absolute;
+        top: 80px;
+        padding-left: 10px;
+        background-color: var(--navBg);
+        width: 100%;
+        opacity: 1;
     }
     .logo{
         color: var(--primaryColor);
@@ -718,6 +728,10 @@
         color: #7562E0;
         font-weight: 600;
         font-size: 20px;
+        cursor: pointer;
+    }
+    .menu:focus{
+        color:var(--secondaryColor);
     }
     
     .hero-right{
